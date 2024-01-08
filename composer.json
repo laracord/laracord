@@ -1,0 +1,32 @@
+{
+  "name": "laracord/laracord",
+  "type": "project",
+  "description": "The Laracord Framework.",
+  "keywords": ["framework", "laravel", "discord"],
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "laracord/framework": "dev-main"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.9.1",
+    "laravel/pint": "^1.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
