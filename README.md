@@ -1,6 +1,8 @@
 # Laracord
 
-Laracord is a micro-framework that provides a powerful starting point for your next Discord bot. Build functional, elegant bots harnessing the full power of [Laravel](https://laravel.com/) alongside [DiscordPHP](https://github.com/discord-php/DiscordPHP).
+Laracord is a micro-framework that provides a powerful starting point for your next Discord bot.
+
+Build functional, elegant bots harnessing the full power of [Laravel](https://laravel.com/) alongside [DiscordPHP](https://github.com/discord-php/DiscordPHP).
 
 ## Requirements
 
