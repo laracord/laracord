@@ -18,7 +18,7 @@ Make sure all dependencies have been installed before moving on:
 Start by creating a Laracord project:
 
 ```sh
-composer create-project laracord/laracord
+composer create-project laracord/laracord:dev-main
 cd laracord
 ```
 
