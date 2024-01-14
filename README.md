@@ -28,7 +28,9 @@ php artisan migrate:fresh
 
 In order to run the Bot, you will have to create a Application using the [Discord Developer Portal](https://discord.com/developers/applications) and obtain a **bot token**.
 
-Once you obtain a token, you can configure it inside of `config/discord.php`.
+By default, the Bot will also require you enable the necessary [Intents](https://discord.com/developers/docs/topics/gateway#gateway-intents). These can be found and enabled in the developer portal under `Settings > Bot > Privileged Gateway Intents`.
+
+Once you obtain a token, you can configure it inside of `.env` or `config/discord.php`.
 
 ## Usage
 
