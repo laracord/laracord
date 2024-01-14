@@ -1,5 +1,7 @@
 <?php
 
+use Discord\WebSockets\Intents;
+
 return [
 
     /*
@@ -30,6 +32,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Gateway Intents
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the gateway intents for your Discord bot. This
+    | will tell Discord what events your bot should receive. Intents can be
+    | enabled in the Discord developer application portal under:
+    |
+    | Settings > Bot > Privileged Gateway Intents
+    |
+    */
+
+    'intents' => Intents::getDefaultIntents() | Intents::GUILD_MEMBERS,
+
+    /*
+    |--------------------------------------------------------------------------
     | Command Prefix
     |--------------------------------------------------------------------------
     |
@@ -43,15 +60,48 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Help Command
+    | Additional DiscordPHP Options
     |--------------------------------------------------------------------------
     |
-    | Here you may specify whether the help command should be enabled. This
-    | command will display a list of all available commands. You may
-    | change this to `false` if you don't want to use this.
+    | Here you may specify any additional options for the DiscordPHP client.
+    | These options will be passed directly to the DiscordPHP client.
+    |
+    | For more information, see the DiscordPHP documentation:
+    | https://discord-php.github.io/DiscordPHP/#basics
     |
     */
 
-    'help' => true,
+    'options' => [
+        'loadAllMembers' => true,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Timestamp Format
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the timestamp format for the Discord bot. This
+    | format will be used when formatting console output. You can set this
+    | to `false` to disable timestamps.
+    |
+    */
+
+    'timestamp' => 'h:i:s A',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional Commands
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify any additional commands for the Discord bot. These
+    | commands will be loaded in addition to the commands automatically loaded
+    | in your project. By default, the Laracord-provided help command is
+    | is registered here.
+    |
+    */
+
+    'commands' => [
+        Laracord\Commands\HelpCommand::class,
+    ],
 
 ];
