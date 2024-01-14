@@ -58,6 +58,14 @@ php laracord app:build
 
 Additional documentation on `app:build` can be found in the [Laravel Zero docs](https://laravel-zero.com/docs/build-a-standalone-application).
 
+## Additional Documentation
+
+Laracord currently lacks it's own documentation, but you can find the documentation of the packages/frameworks it utilizes below to learn more in the mean time:
+
+- [DiscordPHP](https://discord-php.github.io/DiscordPHP/)
+- [Laravel Zero](https://laravel-zero.com/docs)
+- [Laravel](https://laravel.com/docs)
+
 ## Bug Reports
 
 If you discover a bug in Laracord, please [open an issue](https://github.com/laracord/laracord/issues).
