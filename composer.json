@@ -1,7 +1,7 @@
 {
   "name": "laracord/laracord",
   "type": "project",
-  "description": "The Laracord Framework.",
+  "description": "Create Discord bots harnessing the full power of Laravel.",
   "keywords": ["framework", "laravel", "discord"],
   "license": "MIT",
   "require": {
@@ -18,6 +18,11 @@
       "Database\\Factories\\": "database/factories/",
       "Database\\Seeders\\": "database/seeders/"
     }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
   },
   "config": {
     "preferred-install": "dist",
