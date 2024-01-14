@@ -50,6 +50,12 @@ To boot your bot, simply run `laracord` with no arguments passed:
 php laracord
 ```
 
+For convenience, Laracord comes with a console command to set a specified user as admin using their Discord ID.
+
+```sh
+php laracord bot:admin <id>
+```
+
 ## Building for Production
 
 To build your bot for production, simply run the `app:build` command:
