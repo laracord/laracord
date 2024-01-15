@@ -41,6 +41,49 @@ Creating your own command is simple and can be generated using the `laracord` bi
 php laracord make:command Example
 ```
 
+A generated command in it's simplest form will look something like:
+
+```php
+<?php
+
+namespace App\Commands;
+
+use Laracord\Commands\Command;
+
+class Example extends Command
+{
+    /**
+     * The Discord command name.
+     *
+     * @var string
+     */
+    protected $name = 'example';
+
+    /**
+     * The Discord command description.
+     *
+     * @var string
+     */
+    protected $description = 'The command description.';
+
+    /**
+     * Execute the Discord command.
+     *
+     * @param  \Discord\Parts\Channel\Message  $message
+     * @param  array  $args
+     * @return void
+     */
+    public function handle($message, $args)
+    {
+        return $this
+            ->message()
+            ->title('Example')
+            ->content('Hello world!')
+            ->send($message);
+    }
+}
+```
+
 To boot your bot, simply run `laracord` with no arguments passed:
 
 ```sh
