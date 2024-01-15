@@ -44,10 +44,16 @@ To boot your bot, simply run `laracord` with no arguments passed:
 php laracord
 ```
 
-For convenience, Laracord comes with a console command to set a specified user as admin using their Discord ID.
+For convenience, Laracord comes with a console command to set a specified user as admin using their Discord ID:
 
 ```sh
 php laracord bot:admin <id>
+```
+
+To view all built-in console commands, you can run the `list` command:
+
+```sh
+php laracord list
 ```
 
 ## Building for Production
@@ -67,6 +73,8 @@ Laracord currently lacks it's own documentation, but you can find the documentat
 - [DiscordPHP](https://discord-php.github.io/DiscordPHP/)
 - [Laravel Zero](https://laravel-zero.com/docs)
 - [Laravel](https://laravel.com/docs)
+
+You may also be interested in the underlying [Laracord Framework](https://github.com/laracord/framework) source code to get a better understanding of existing functionality until proper documentation is written.
 
 ## Bug Reports
 
