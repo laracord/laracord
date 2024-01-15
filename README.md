@@ -35,6 +35,8 @@ Once you obtain a token, you can configure it inside of `.env` or `config/discor
 
 Out of the box, Laracord includes a simple `!ping` command to test your bot with a simple response.
 
+### Creating Commands
+
 Creating your own command is simple and can be generated using the `laracord` binary:
 
 ```sh
@@ -84,11 +86,15 @@ class Example extends Command
 }
 ```
 
+### Booting Laracord
+
 To boot your bot, simply run `laracord` with no arguments passed:
 
 ```sh
 php laracord
 ```
+
+### Adding a Bot Admin
 
 For convenience, Laracord comes with a console command to set a specified user as admin using their Discord ID:
 
@@ -96,13 +102,15 @@ For convenience, Laracord comes with a console command to set a specified user a
 php laracord bot:admin <id>
 ```
 
+### Additional Commands
+
 To view all built-in console commands, you can run the `list` command:
 
 ```sh
 php laracord list
 ```
 
-## Building for Production
+### Building for Production
 
 To build your bot for production, simply run the `app:build` command:
 
@@ -110,9 +118,9 @@ To build your bot for production, simply run the `app:build` command:
 php laracord app:build
 ```
 
-Additional documentation on `app:build` can be found in the [Laravel Zero docs](https://laravel-zero.com/docs/build-a-standalone-application).
+Documentation for `app:build` can be found in the [Laravel Zero docs](https://laravel-zero.com/docs/build-a-standalone-application).
 
-## Additional Documentation
+## Documentation
 
 Laracord currently lacks it's own documentation, but you can find the documentation of the packages/frameworks it utilizes below to learn more in the mean time:
 
