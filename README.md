@@ -22,12 +22,6 @@ composer create-project laracord/laracord:dev-main
 cd laracord
 ```
 
-Once the project is created, you can proceed to run the default migration(s):
-
-```sh
-php artisan migrate:fresh
-```
-
 In order to run the Bot, you will have to create a Application using the [Discord Developer Portal](https://discord.com/developers/applications) and obtain a **bot token**.
 
 By default, the Bot will also require you enable the necessary [Intents](https://discord.com/developers/docs/topics/gateway#gateway-intents). These can be found and enabled in the developer portal under `Settings > Bot > Privileged Gateway Intents`.
