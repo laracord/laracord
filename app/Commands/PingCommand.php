@@ -25,15 +25,16 @@ class PingCommand extends Command
      *
      * @param  \Discord\Parts\Channel\Message  $message
      * @param  array  $args
-     * @return mixed
+     * @return void
      */
     public function handle($message, $args)
     {
-        return $this->message(
-            $message->channel,
-            'Ping',
-            'Pong!',
-            ['Response time' => (string) $message->timestamp->diff()->f]
-        );
+        return $this
+            ->message()
+            ->title('Ping')
+            ->content('Pong!')
+            ->field('Response time', $message->timestamp->diffForHumans(null, true))
+            ->button('GitHub', 'https://github.com/laracord/laracord')
+            ->send($message);
     }
 }
