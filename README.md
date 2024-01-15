@@ -6,6 +6,11 @@ Build functional, elegant bots harnessing the full power of [Laravel](https://la
 
 ![Screenshot](https://i.imgur.com/yW2vpPR.png)
 
+> [!WARNING]
+> Laracord is currently early in the development stage and breaking changes are likely until a release is tagged.
+>
+> Keep an eye on the [Laracord Framework issue tracker](https://github.com/laracord/framework/issues) for upcoming features and changes.
+
 ## Requirements
 
 Make sure all dependencies have been installed before moving on:
