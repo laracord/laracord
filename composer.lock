@@ -2289,12 +2289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracord/framework.git",
-                "reference": "409c0fd0fc2dc923ab8d9986d03bfdf6bd194898"
+                "reference": "083e7e8b36ab0339bc46ba45e772b2c25e0c634e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracord/framework/zipball/409c0fd0fc2dc923ab8d9986d03bfdf6bd194898",
-                "reference": "409c0fd0fc2dc923ab8d9986d03bfdf6bd194898",
+                "url": "https://api.github.com/repos/laracord/framework/zipball/083e7e8b36ab0339bc46ba45e772b2c25e0c634e",
+                "reference": "083e7e8b36ab0339bc46ba45e772b2c25e0c634e",
                 "shasum": ""
             },
             "require": {
@@ -2344,7 +2344,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-14T17:42:38+00:00"
+            "time": "2024-01-15T06:50:26+00:00"
         },
         {
             "name": "laravel-zero/foundation",
