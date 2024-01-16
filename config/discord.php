@@ -6,19 +6,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Discord Bot Description
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify the description of your Discord bot. This will be
-    | used when the bot is mentioned in chat, or when you run the "servers"
-    | command. Change this to anything you like.
-    |
-    */
-
-    'description' => env('DISCORD_BOT_DESCRIPTION', 'The Laracord Discord Bot.'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Discord Token
     |--------------------------------------------------------------------------
     |
@@ -67,7 +54,7 @@ return [
     | These options will be passed directly to the DiscordPHP client.
     |
     | For more information, see the DiscordPHP documentation:
-    | https://discord-php.github.io/DiscordPHP/#basics
+    |   ↪ <https://discord-php.github.io/DiscordPHP/#basics>
     |
     */
 
@@ -102,6 +89,21 @@ return [
 
     'commands' => [
         Laracord\Commands\HelpCommand::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional Services
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify any additional services to run asynchronously
+    | alongside the Discord bot. These services will be loaded in addition
+    | to the services automatically loaded from your project.
+    |
+    */
+
+    'services' => [
+        //
     ],
 
 ];
