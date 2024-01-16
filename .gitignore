@@ -1,3 +1,4 @@
 /vendor
 /builds
-/database/database.sqlite
+/cache
+*.sqlite
