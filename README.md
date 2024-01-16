@@ -131,7 +131,7 @@ $channel = $this->getDiscord()->getChannel('your-channel-id');
 
 $this
     ->message()
-    ->content('Hello world')
+    ->content('Hello world.')
     ->send($channel);
 ```
 
