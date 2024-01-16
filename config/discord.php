@@ -6,6 +6,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Discord Bot Description
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the description of your Discord bot. This will be
+    | used when the bot is mentioned in chat, or when you run the "servers"
+    | command. Change this to anything you like.
+    |
+    */
+
+    'description' => env('DISCORD_BOT_DESCRIPTION', 'The Laracord Discord Bot.'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Discord Token
     |--------------------------------------------------------------------------
     |
