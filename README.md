@@ -46,6 +46,8 @@ php laracord make:command Example
 A generated command in it's simplest form will look something like:
 
 ```php
+<?php
+
 namespace App\Commands;
 
 use Laracord\Commands\Command;
@@ -99,6 +101,8 @@ php laracord make:service Example
 The default generated service will create a task that logs `Hello World` to console every 5 seconds.
 
 ```php
+<?php
+
 namespace App\Services;
 
 use Laracord\Services\Service;
