@@ -7,21 +7,21 @@ use Laracord\Commands\Command;
 class PingCommand extends Command
 {
     /**
-     * The Discord command name.
+     * The command name.
      *
      * @var string
      */
     protected $name = 'ping';
 
     /**
-     * The Discord command description.
+     * The command description.
      *
      * @var string|null
      */
     protected $description = 'Ping? Pong!';
 
     /**
-     * Execute the Discord command.
+     * Handle the command.
      *
      * @param  \Discord\Parts\Channel\Message  $message
      * @param  array  $args
