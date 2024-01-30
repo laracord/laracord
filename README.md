@@ -55,21 +55,21 @@ use Laracord\Commands\Command;
 class Example extends Command
 {
     /**
-     * The Discord command name.
+     * The command name.
      *
      * @var string
      */
     protected $name = 'example';
 
     /**
-     * The Discord command description.
+     * The command description.
      *
      * @var string
      */
     protected $description = 'The command description.';
 
     /**
-     * Execute the Discord command.
+     * Handle the command.
      *
      * @param  \Discord\Parts\Channel\Message  $message
      * @param  array  $args
@@ -86,6 +86,114 @@ class Example extends Command
 }
 ```
 
+### Creating Slash Commands
+
+Laracord has full support for slash commands out of the box. When a command is created, updated, or removed – the Discord application command repository is automatically updated.
+
+Similar to creating a normal command, creating a slash command can be done using the `laracord` binary:
+
+```sh
+php laracord make:slash-command Example
+```
+
+A generated slash command in it's simplest form will look something like:
+
+```php
+<?php
+
+namespace App\SlashCommands;
+
+use Laracord\Commands\SlashCommand;
+
+class Example extends SlashCommand
+{
+    /**
+     * The slash command name.
+     *
+     * @var string
+     */
+    protected $name = 'example';
+
+    /**
+     * The slash command description.
+     *
+     * @var string
+     */
+    protected $description = 'The example slash command.';
+
+    /**
+     * Handle the slash command.
+     *
+     * @param  \Discord\Parts\Interactions\Interaction  $interaction
+     * @return void
+     */
+    public function handle($interaction)
+    {
+        $interaction->respondWithMessage(
+            $this
+              ->message()
+              ->title('Example')
+              ->content('Hello world!')
+              ->build()
+        );
+    }
+}
+```
+
+To only register a slash command to a specific guild/server, you may set the `$guild` property:
+
+```php
+/**
+ * The guild the command belongs to.
+ *
+ * @var string
+ */
+protected $guild = 'your-guild-id';
+```
+
+Adding options to your slash command can be done by passing an array of options to the `$options` property **or** overriding the `options()` method. Options can be specified as a raw array or by passing an array of [DiscordPHP Option Parts](https://github.com/discord-php/DiscordPHP/wiki/Option_commands).
+
+```php
+use Discord\Parts\Interactions\Command\Option;
+
+/**
+ * The slash command options.
+ *
+ * @var array
+ */
+protected $options = [
+    [
+        'name' => 'message',
+        'description' => 'Send a message through the bot.',
+        'type' => Option::STRING,
+        'required' => true,
+    ],
+];
+```
+
+```php
+use Discord\Parts\Interactions\Command\Option;
+
+/**
+ * Set the command options.
+ *
+ * @return array
+ */
+public function options()
+{
+    $option = new Option($this->discord());
+
+    return [
+        $option
+          ->setName('message')
+          ->setDescription('Send a message through the bot')
+          ->setType(Option::STRING)
+          ->setRequired(true)
+          ->toArray(),
+    ];
+}
+```
+
 ### Creating Services
 
 Services are asynchronous tasks that run parallel to the Discord bot on an interval. This is useful for scenarios such as fetching data from an API every so often and sending the results to Discord through the bot.
@@ -94,7 +202,7 @@ Services created in your application are automatically booted alongside your bot
 
 To create a service, run the `make:service` command:
 
-```php
+```sh
 php laracord make:service Example
 ```
 
@@ -140,6 +248,13 @@ $this
     ->message()
     ->content('Hello world.')
     ->send($channel);
+
+$user = $this->discord()->users->get('id', 'a-user-id');
+
+$this
+    ->message()
+    ->content('Hello world.')
+    ->sendTo($user);
 ```
 
 ### Booting Laracord
