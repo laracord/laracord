@@ -119,4 +119,19 @@ return [
         //
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Additional Events
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify any additional events to listen for in your
+    | Discord bot. These events will be registered in addition to the
+    | events automatically registered from your project.
+    |
+    */
+
+    'events' => [
+        //
+    ],
+
 ];
