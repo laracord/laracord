@@ -6,9 +6,6 @@ Build functional, elegant bots harnessing the full power of [Laravel](https://la
 
 ![Screenshot](https://i.imgur.com/yW2vpPR.png)
 
-> [!WARNING]
-> Laracord is currently [early in the development stage](https://github.com/laracord/framework/issues) and breaking changes are likely until a release is tagged.
-
 ## Requirements
 
 Make sure all dependencies have been installed before moving on:
@@ -191,6 +188,49 @@ public function options()
           ->setRequired(true)
           ->toArray(),
     ];
+}
+```
+
+### Creating Events
+
+Laracord makes creating handlers for specific Discord events extremely straight forward. Creating an event handler can be done using the `laracord` binary:
+
+```sh
+php laracord make:event Example
+```
+
+When creating an event, you will be prompted to choose a listener from a searchable select box.
+
+Once you select a listener, an Event class will automatically be generated including the necessary namespaces/typing specific to the handler.
+
+Here is an example of a simple `MESSAGE_CREATE` event handler that logs a message to console everytime a message is created:
+
+```php
+<?php
+
+namespace App\Events;
+
+use Discord\Discord;
+use Discord\Parts\Channel\Message;
+use Discord\WebSockets\Event as Events;
+use Laracord\Events\Event;
+
+class Example extends Event
+{
+    /**
+     * The event handler.
+     *
+     * @var string
+     */
+    protected $handler = Events::MESSAGE_CREATE;
+
+    /**
+     * Handle the event.
+     */
+    public function handle(Message $message, Discord $discord)
+    {
+        $this->console()->log('The Message Create event has fired!');
+    }
 }
 ```
 
