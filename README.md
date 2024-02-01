@@ -15,6 +15,16 @@ Quickly build functional, elegant bots using [Laravel](https://laravel.com/) alo
 
 ![Screenshot](https://raw.githubusercontent.com/laracord/laracord.com/main/public/images/laracord-cli.png)
 
+## Features
+
+- ⚡️ Out of the box support for databases, caching, and many other Laravel features thanks to [Laravel Zero](https://laravel-zero.com/).
+- 🚀 Instantly generate working bot [commands](https://laracord.com/docs/commands) and [event listeners](https://laracord.com/docs/events) with 0 knowledge.
+- 🧑‍💻 Automatic handling of registering/updating/unregistering application [slash commands](https://laracord.com/docs/slash-commands).
+- 👷 Generate asynchronous [services/tasks](https://laracord.com/docs/services) that run parallel to the bot.
+- 🔧 Fully configurable and extendable.
+- 💄 Beautiful console logging with timestamps.
+- 🔍️ Fully [documented](https://laracord.com) and maintained.
+
 ## Documentation
 
 For full documentation, visit [Laracord.com](https://laracord.com).
