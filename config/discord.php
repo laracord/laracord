@@ -78,6 +78,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | HTTP Server
+    |--------------------------------------------------------------------------
+    |
+    | The Laracord HTTP server allows you to receive and respond to HTTP
+    | requests from the bot at the specified address/port. This can be useful
+    | for creating a RESTful API for your bot.
+    |
+    | The HTTP server is automatically started when a `routes.php` file is
+    | present and contains valid routes. You can override this behavior by
+    | setting this option to `false`.
+    |
+    */
+
+    'http' => env('HTTP_SERVER', ':8080'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Timestamp Format
     |--------------------------------------------------------------------------
     |
