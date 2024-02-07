@@ -2,6 +2,8 @@
 
 namespace App\Commands;
 
+use Discord\Builders\Components\Button;
+use Discord\Parts\Interactions\Interaction;
 use Laracord\Commands\Command;
 
 class PingCommand extends Command
@@ -30,11 +32,20 @@ class PingCommand extends Command
     public function handle($message, $args)
     {
         return $this
-            ->message()
+            ->message('Ping? Pong!')
             ->title('Ping')
-            ->content('Pong!')
             ->field('Response time', $message->timestamp->diffForHumans(null, true))
-            ->button('GitHub', 'https://github.com/laracord/laracord')
+            ->button('Laracord Resources', fn (Interaction $interaction) => $interaction->respondWithMessage(
+                $this
+                    ->message('Check out the resources below to learn more about Laracord.')
+                    ->title('Laracord Resources')
+                    ->buttons([
+                        'Documentation' => 'https://laracord.com',
+                        'GitHub' => 'https://github.com/laracord/laracord',
+                    ])
+                    ->build(),
+                ephemeral: true
+            ), emoji: '💻', style: Button::STYLE_SECONDARY)
             ->send($message);
     }
 }
