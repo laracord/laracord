@@ -21,6 +21,7 @@ Quickly build functional, elegant bots using [Laravel](https://laravel.com/) alo
 - 🚀 Instantly generate working bot [commands](https://laracord.com/docs/commands) and [event listeners](https://laracord.com/docs/events) with 0 knowledge.
 - 🧑‍💻 Automatic handling of registering/updating/unregistering application [slash commands](https://laracord.com/docs/slash-commands).
 - 👷 Generate asynchronous [services/tasks](https://laracord.com/docs/services) that run parallel to the bot.
+- 🌎 Optional [HTTP Server](https://laracord.com/docs/http-server) with native Laravel routing and [Livewire support](https://laracord.com/docs/livewire).
 - 🔧 Fully configurable and extendable.
 - 💄 Beautiful console logging with timestamps.
 - 🔍️ Fully [documented](https://laracord.com) and maintained.
