@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/laracord/framework/actions"><img src="https://img.shields.io/github/actions/workflow/status/laracord/framework/main.yml?branch=main&style=flat-square" alt="Build Status" /></a>
   <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/dt/laracord/framework.svg?style=flat-square" alt="Total Downloads" /></a>
-  <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/v/laracord/framework.svg?style=flat-square" alt="Latest Stable Version" /></a>
+  <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/v/laracord/framework.svg?label=framework&style=flat-square" alt="Latest Stable Version" /></a>
   <a href="https://packagist.org/packages/laracord/framework"><img src="https://img.shields.io/packagist/l/laracord/framework.svg?style=flat-square" alt="License" /></a>
 </p>
 
