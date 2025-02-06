@@ -6,7 +6,7 @@
   "license": "MIT",
   "require": {
     "php": "^8.2",
-    "laracord/framework": "^2.3"
+    "laracord/framework": "dev-next"
   },
   "require-dev": {
     "fakerphp/faker": "^1.23",
