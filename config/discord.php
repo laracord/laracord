@@ -6,19 +6,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Discord Bot Description
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify the description of your Discord bot. This will be
-    | used when the bot is mentioned in chat, or when you run the "servers"
-    | command. Change this to anything you like.
-    |
-    */
-
-    'description' => env('DISCORD_BOT_DESCRIPTION', 'The Laracord Discord Bot.'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Discord Token
     |--------------------------------------------------------------------------
     |
@@ -74,6 +61,8 @@ return [
 
     'options' => [
         'loadAllMembers' => true,
+        'storeMessages' => false,
+        'retrieveBans' => false,
     ],
 
     /*
@@ -118,67 +107,6 @@ return [
     */
 
     'admins' => [
-        //
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Additional Commands
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify any additional commands for the Discord bot. These
-    | commands will be loaded in addition to the commands automatically loaded
-    | in your project. By default, the Laracord-provided help command is
-    | is registered here.
-    |
-    */
-
-    'commands' => [
-        Laracord\Commands\HelpCommand::class,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Additional Context Menus
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify any additional context menus for the Discord bot.
-    | These context menus will be loaded in addition to the context menus
-    | automatically loaded in your project.
-    |
-    */
-
-    'menus' => [
-        //
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Additional Services
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify any additional services to run asynchronously
-    | alongside the Discord bot. These services will be loaded in addition
-    | to the services automatically loaded from your project.
-    |
-    */
-
-    'services' => [
-        //
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Additional Events
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify any additional events to listen for in your
-    | Discord bot. These events will be registered in addition to the
-    | events automatically registered from your project.
-    |
-    */
-
-    'events' => [
         //
     ],
 
