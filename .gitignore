@@ -4,3 +4,4 @@
 /.laracord
 *.sqlite
 .env
+composer.lock
